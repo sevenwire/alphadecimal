@@ -27,7 +27,7 @@ module Alphadecimal
       string.reverse
     end
   end
-  
+
   module String
     def alphadecimal
       return self unless is_alphadecimal?
@@ -43,7 +43,7 @@ module Alphadecimal
       end
       val
     end
-    
+
     def is_alphadecimal?
       return false if nil?
       string = dup
@@ -59,9 +59,6 @@ end
 class String
   include Alphadecimal::String
 end
-class Fixnum
-  include Alphadecimal::Number
-end
-class Bignum
+class Integer
   include Alphadecimal::Number
 end
